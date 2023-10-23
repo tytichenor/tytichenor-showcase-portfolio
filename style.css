@@ -1,0 +1,312 @@
+/* credits
+animated gradient text - https://www.amitmerchant.com/animated-gradient-effect-in-css/
+animated gradient bg - https://stackdiary.com/css-animated-gradient-background/
+clouds - https://codepen.io/Mark_Bowley/pen/LYZEBq
+image slider - https://css-tricks.com/creating-a-css-sliding-background-effect/
+*/
+
+
+body{
+  font-family: 'Belanosima', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header{
+  color: black;
+  padding: 20px;
+  background-color: white;
+}
+  
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+footer{
+  background-color: #F5F5F7;
+  font-weight: lighter;
+  padding: 20px;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+p{
+  color: black;
+  font-weight: lighter;
+}
+
+.learn-more-link{
+  font-weight: lighter;
+}
+
+
+/* color text gradient (not moving) (web design and front-end development) */
+.color-text{
+  background: -webkit-linear-gradient(white, #1B5560);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* my Projects animated gradient */
+@keyframes myProjects {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+p{
+  font-weight: bold;
+  margin: 5px;
+  background: linear-gradient(
+    to right,
+    #1B5560 20%,
+    white 30%,
+    #E68989 70%,
+    white 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: myProjects 5s ease-in-out infinite alternate;
+}
+
+
+/* sliding images */
+.wrapper {
+  overflow: hidden;
+  position: absolute;
+}
+.sliding-background {
+  background: url("content/project-slider-5077x501.png");
+  height: 500px;
+  width: 5077px;
+  animation: slide 40s linear infinite;
+}
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+
+
+
+
+/* index */
+.container-1-index{
+    background: linear-gradient(-45deg, #E68989, white, #E68989);
+    background-size: 400% 400%;
+    animation: index-moving-gradient 10s ease infinite;
+    display: block;
+    height: 500px;
+    position: relative; 
+}
+/* for above (background animated gradient) */
+@keyframes index-moving-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container-2-index{
+  margin-top: 2em;
+  background-color: #F5F5F7;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-3-index{
+  margin-top: 2em;
+  background-color: #F5F5F7;
+  display: block;
+  height: 500px;
+  position: relative; 
+}
+
+.container-4-index{
+  margin-top: 2em;
+  background-color: #F5F5F7;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-1-index{
+    position: absolute;
+    top: 50%; 
+    left: 40vw; 
+    transform: translateY(-50%); 
+    color: #F5F5F7;
+    font-size: 70px;
+}
+
+.text-2-index{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  left: 15vw;
+  right: 15vw;
+  color: black;
+  font-size: 50px;
+}
+
+.text-3-index{
+  position: absolute;
+  top: 75%;
+  transform: translateY(-50%); 
+  left: 23vw;
+  font-size: 50px;
+}
+
+.text-4-index{
+  position: absolute;
+  top: 75%;
+  transform: translateY(-50%); 
+  right: 22vw;
+  font-size: 50px;
+}
+
+.text-5-index{
+  text-align: center;
+  font-size: 170px;
+}
+
+.pic-1-index{
+  position: absolute;
+  top: 50%; 
+  left: 10vw; 
+  transform: translateY(-50%); 
+}
+
+.pic-2-index{
+  position: absolute;
+  top: 45%; 
+  left: 20vw; 
+  transform: translateY(-50%); 
+}
+
+.pic-3-index{
+  position: absolute;
+  top: 45%; 
+  right: 20vw; 
+  transform: translateY(-50%); 
+}
+
+
+/* directory */
+.container-1-directory{
+  background-color: #F5F5F7;
+  display: block;
+  height: 400px;
+  position: relative;
+}
+
+.text-1-directory{
+  position: absolute;
+  top: 50%;
+  left: 40vw; 
+  right: 40vw; 
+  transform: translateY(-50%); 
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* project picker */
+.container-1-project-picker{
+  background-color: #5ce1e6;
+  height: 640px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-2-project-picker{
+  margin-top: 2em;
+  background-color: #F5F5F7;
+  display: block;
+  height: 500px;
+}
+
+.container-3-project-picker{
+  margin-top: 2em;
+  background-color: #F5F5F7;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-1-project-picker{
+  color: black;
+  font-size: 170px;
+  text-align: center;
+}
+
+.text-2-project-picker{
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+/* about me */
+.container-1-about-me{
+  background-color: #F5F5F7;
+  display: block;
+  height: 400px;
+}
+
+
+
+
+/* experimental below */
+html {
+  scroll-behavior:smooth;
+}
+
+.footer-link{
+  text-decoration: underline;
+}
