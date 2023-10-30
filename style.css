@@ -12,6 +12,7 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: #1B5560;
 }
 
 header{
@@ -34,6 +35,10 @@ nav li {
 
 nav li:first-child {
   margin-left: 0;
+}
+
+.footer-link{
+  text-decoration: underline;
 }
 
 footer{
@@ -97,30 +102,6 @@ p{
 }
 
 
-/* sliding images */
-.wrapper {
-  overflow: hidden;
-  position: absolute;
-}
-.sliding-background {
-  background: url("content/project-slider-5077x501.png");
-  height: 500px;
-  width: 5077px;
-  animation: slide 40s linear infinite;
-}
-@keyframes slide{
-  0%{
-    transform: translate3d(0, 0, 0);
-  }
-  100%{
-    transform: translate3d(-1692px, 0, 0);
-  }
-}
-
-
-
-
-
 /* index */
 .container-1-index{
     background: linear-gradient(-45deg, #E68989, white, #E68989);
@@ -146,7 +127,7 @@ p{
 .container-2-index{
   margin-top: 2em;
   background-color: #F5F5F7;
-  height: 500px;
+  height: 700px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -254,7 +235,7 @@ p{
 
 /* project picker */
 .container-1-project-picker{
-  background-color: #5ce1e6;
+  background-color: #1B5560;
   height: 640px;
   position: relative;
   display: flex;
@@ -272,7 +253,7 @@ p{
 .container-3-project-picker{
   margin-top: 2em;
   background-color: #F5F5F7;
-  height: 500px;
+  height: 300px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -280,7 +261,7 @@ p{
 }
 
 .text-1-project-picker{
-  color: black;
+  color: white;
   font-size: 170px;
   text-align: center;
 }
@@ -291,22 +272,80 @@ p{
   text-align: center;
 }
 
+/* slideshow */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: auto;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 100px;
+}
+
+.prev{
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: #F5F5F7;
+}
+
+
+
 
 /* about me */
 .container-1-about-me{
   background-color: #F5F5F7;
-  display: block;
   height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
-/* experimental below */
-html {
-  scroll-behavior:smooth;
+.text-1-about-me{
+  color: black;
+  font-size: 40px;
+  text-align: center;
 }
 
-.footer-link{
-  text-decoration: underline;
+.container-2-about-me{
+  margin-top: 2em;
+  background-color: #F5F5F7;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.text-2-about-me{
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+
